@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lss.example.lssdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.lss.example.lssdemo" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pxt"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.lss.example.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- afinal框架 -->
+        <activity
+            android:name="com.lss.example.activity.MyAfinalActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 多线程断点下载 -->
+        <activity
+            android:name="com.lss.example.activity.MultiThreadActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 自定义View -->
+        <activity
+            android:name="com.lss.example.activity.ShowMyViewActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 通过Http编程获取网络图片 -->
+        <activity
+            android:name="com.lss.example.activity.HttpGetImageActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- json数据的解析 -->
+        <activity
+            android:name="com.lss.example.activity.JsonActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 序列化 -->
+        <activity
+            android:name="com.lss.example.activity.SeriazableActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <!-- 序列化 -->
+        <activity
+            android:name="com.lss.example.activity.ShowSeriazableActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 图片缓存 -->
+        <activity
+            android:name="com.lss.example.activity.ImageLoaderActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 广播接收 -->
+        <activity
+            android:name="com.lss.example.activity.BroadcaseReceiverActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- item可以点击按钮的ListView -->
+        <activity
+            android:name="com.lss.example.activity.ListViewButtonActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
+        <!-- 注册自定义静态广播接收器 -->
+        <receiver android:name="com.lss.example.server.UnSortStaticBroadcaseReceiver" >
+            <intent-filter>
+                <action android:name="lishuisheng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 有序广播的注册START -->
+        <receiver android:name="com.lss.example.server.SortFirstBroadcaseReceiver" >
+            <intent-filter android:priority="999" >
+                <action android:name="sort" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收短信广播 -->
+        <receiver android:name="com.lss.example.server.SortSecondBroadcaseReceiver" >
+            <intent-filter android:priority="998" >
+                <action android:name="sort" />
+            </intent-filter>
+        </receiver>
+        <!-- 有序广播的注册END -->
+
+
+        <!-- 静态添加fragment -->
+        <activity
+            android:name="com.lss.example.activity.FragmentStatic"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- 静态添加fragment -->
+        <activity
+            android:name="com.lss.example.activity.FragmentDynamic"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- Service与Activity交互 -->
+        <activity
+            android:name="com.lss.example.activity.ServiceBroadcaseActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- 注册服务一 -->
+        <service
+            android:name="com.lss.example.server.ServiceBroadcase"
+            android:enabled="true" >
+        </service>
+        <!-- 注册服务二 -->
+        <service android:name="com.lss.example.server.ServiceMessenger" >
+            <intent-filter>
+                <action android:name="com.lss.example.server.ServiceMessenger" />
+            </intent-filter>
+        </service>
+
+        <!-- 通过信使传递信息 -->
+        <activity
+            android:name="com.lss.example.activity.ServiceMessengerActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- 通过binder传递信息 -->
+        <activity
+            android:name="com.lss.example.activity.ServiceBinderActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- 注册服务三 -->
+        <service android:name="com.lss.example.server.BinderService" >
+            <intent-filter>
+                <action android:name="bindservice" />
+            </intent-filter>
+        </service>
+
+        <!-- 数据库操作 -->
+        <activity
+            android:name="com.lss.example.activity.DataBaseActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- viewholder -->
+        <activity
+            android:name="com.lss.example.activity.ListViewHolderActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- 轮播 -->
+        <activity
+            android:name="com.lss.example.activity.BannerActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.SaxParseActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.AsynTaskActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.XListViewActivty"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.ContentProviderActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.VolleyActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.SwipeRefreshLayoutActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.TrigonViewActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lss.example.activity.ViewFlipperActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>

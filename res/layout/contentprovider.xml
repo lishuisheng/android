@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        style="@style/Title"
+        android:text="contentprovider"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_contentprovider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="未获取其他应该ContentProvider的数据"
+        android:textColor="#0099CC"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_getContentProvider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="获取数据" />
+
+</RelativeLayout>

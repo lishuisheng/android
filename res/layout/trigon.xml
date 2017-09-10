@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.lss.example.lssdemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        style="@style/Title"
+        android:text="自定义控件" />
+
+    <com.lss.example.view.TrigonView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+     />
+
+</RelativeLayout>

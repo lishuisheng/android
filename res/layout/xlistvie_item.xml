@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#BFBFBF"
+    android:orientation="horizontal" >
+
+    <com.lss.example.view.RoundImageView
+        android:id="@+id/iv_roudn_img"
+        android:layout_width="90dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_xlist_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textColor="#0099CC"
+        android:textSize="26sp" />
+
+</LinearLayout>

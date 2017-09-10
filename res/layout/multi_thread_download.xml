@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ff33" >
+
+    <TextView
+        android:id="@+id/tv_multi"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#00cc99"
+        android:gravity="center"
+        android:text="@string/multidownload"
+        android:textColor="@color/blue"
+        android:textSize="23sp" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btn_multiLoad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_green"
+        android:gravity="center"
+        android:onClick="click"
+        android:text="@string/multidownload" />
+
+</RelativeLayout>

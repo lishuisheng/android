@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <attr  name="lss_text" format="string"/>
+     <attr  name="lss_color" format="color"/>
+      <attr name="lss_size" format="dimension" />  
+      
+       <declare-styleable name="TrigonView">  
+        <attr name="lss_text" />  
+        <attr name="lss_color" />  
+        <attr name="lss_size" />  
+    </declare-styleable>  
+    
+</resources>

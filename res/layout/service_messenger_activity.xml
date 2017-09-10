@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/tv_service_messenger"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+        
+        <Button 
+            android:id="@+id/btn_bindService"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="bindService"
+            android:gravity="center"/>
+        
+            <Button 
+            android:id="@+id/btn_unbindervice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="unbindService"
+            android:gravity="center"/>
+            
+         
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
